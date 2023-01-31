@@ -1,0 +1,88 @@
+nav{
+   background: #000;
+}
+
+.image {
+    height: 100vh;
+    background: url("../assets/images/bggg.png");
+    background-size: cover;
+}
+
+.intro {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.title-1 {
+    letter-spacing: 3px;
+    color: green;
+    
+}
+
+.title-2 {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 2;
+    text-shadow: 2px black;
+    letter-spacing: 4px;
+}
+
+p {
+    letter-spacing: 4px; 
+    
+}
+
+h1 {
+    color: white;
+}
+
+.imageAbout {
+    height: 100vh;
+    background: url("../assets/images/bgggg.jpg");
+    background-size: cover;
+
+}
+
+.about {
+    height: 600px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+.imageExperience {
+    height: 100vh;
+    background: url("../assets/images/bggg.png");
+    background-size: cover;
+}
+
+.experience {
+    height: 600px;
+    width: 500px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: left;
+}
+
+.imageContact {
+    height: 100vh;
+    background: url("../assets/images/bgggg.jpg");
+    background-size: cover;
+}
+
+.contact {
+    height: 600px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer {
+    font-size:x-small
+    
+}
