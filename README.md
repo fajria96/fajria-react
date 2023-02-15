@@ -1,3 +1,16 @@
+<!--    React Version         = 18.2.0
+        Visual Studio Version =
+                                Version: 1.75.1 (Universal)
+                                Commit: 441438abd1ac652551dbe4d408dfcec8a499b8bf
+                                Date: 2023-02-08T21:34:59.000Z
+                                Electron: 19.1.9
+                                Chromium: 102.0.5005.194
+                                Node.js: 16.14.2
+                                V8: 10.2.154.23-electron.0
+                                OS: Darwin x64 19.6.0
+                                Sandboxed: No -->
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +81,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
