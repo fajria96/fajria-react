@@ -8,7 +8,6 @@ import {
   Col,
 } from "react-bootstrap";
 import React from "react";
-import "../style/StyleRegister.css";
 import ShowErrors from "./ShowErrors";
 
 export default class FormRegister extends React.Component {

@@ -1,17 +1,12 @@
 import React from "react";
-import Footer from "./components/newsapi/Footer";
-import Navigationbar from "./components/newsapi/Navigationbar";
-import {GetNews, SearchNews} from "./components/newsapi/Api"
-import "./style/News.css";
+import "./style/StyleRegister.css";
+import FormRegister from "./components/form-register/FormRegister";
 
 
 function App() {
   return (
     <div className="container-fluid">
-      <Navigationbar />
-      <SearchNews />
-      <GetNews />
-      <Footer />
+      <FormRegister/>
     </div>
   );
 }
