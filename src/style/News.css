@@ -14,12 +14,18 @@ body {
 }
 
 .news {
-  max-width: 100%;
   padding: 20px;
   margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 40px;
+}
+
+.card {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 8);
+  max-width: 100%;
+  padding: 10px;
+  border: 1px dashed gray;
 }
 
 input {
@@ -28,3 +34,4 @@ input {
   border-color: lightgray;
   border-radius: 8px;
 }
+

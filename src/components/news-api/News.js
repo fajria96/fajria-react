@@ -21,7 +21,7 @@ export default class News extends React.Component {
   componentDidMount() {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?country=id&apiKey=76602b3cb3ef4850914df4cd1f5a7b28"
+        "'https://jsonplaceholder.typicode.com/todos/1'"
       )
       .then((response) => {
         this.setState({
@@ -34,8 +34,8 @@ export default class News extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.searchTerm !== prevState.searchTerm) {
-      const API_KEY = "0f3511afcec24ddca227ed0584047429";
-      const url = `https://newsapi.org/v2/everything?q=${this.state.searchTerm}&apiKey=${API_KEY}`;
+     
+      const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
       fetch(url)
         .then((response) => response.json())

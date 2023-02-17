@@ -1,9 +1,9 @@
-const SingleHeadlines = ({item}) => (
-    <a className="all-news" href={item.url}>
+const SingleHeadlines = ({article}) => (
+    <a className="all-news" href={article.url}>
         <div className="card">
-            <img className="img-fluid" src={item.urlToImage} alt=""/>
+            <img className="img-fluid" src={article.urlToImage} alt=""/>
             <div className="card-body">
-                <p className="card-title">{item.title}</p>
+                <p className="card-title">{article.title}</p>
             </div>
         </div>
     </a>

@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "./components/news-api/Footer";
-import Navigationbar from "./components/news-api/Navigationbar";
-import News from "./components/news-api/News";
+import Footer from "./components/newsapi/Footer";
+import Navigationbar from "./components/newsapi/Navigationbar";
+import {GetNews, SearchNews} from "./components/newsapi/Api"
 import "./style/News.css";
 
 
@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="container-fluid">
       <Navigationbar />
-      <News />
+      <SearchNews />
+      <GetNews />
       <Footer />
     </div>
   );
