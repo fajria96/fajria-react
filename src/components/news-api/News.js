@@ -1,41 +1,30 @@
 import axios from "axios";
 import React from "react";
-import SingleHeadlines from "./SingleHeadlines";
+import { Button } from "react-bootstrap";
 
 export default class News extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      newData: [],
-      articles: [],
-      searchTerm: "",
-      isLoading: true,
-      error: null,
+      results: [],
     };
+    this.handleChange = this.handleChange.bind(this);
   }
-
-  handleInputChange = (event) => {
-    this.setState({ searchTerm: event.target.value });
-  };
 
   componentDidMount() {
     axios
-      .get(
-        "'https://jsonplaceholder.typicode.com/todos/1'"
-      )
+      .get("https://jsonplaceholder.typicode.com/photos")
       .then((response) => {
-        this.setState({
-          newsData: response.data.articles,
-          isLoading: false,
-        });
+        this.setState({ results: response.data });
       })
-      .catch((error) => this.setState({ error, isLoading: false }));
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.searchTerm !== prevState.searchTerm) {
-     
-      const url = 'https://jsonplaceholder.typicode.com/todos/1';
+      const url = "https://jsonplaceholder.typicode.com/photos";
 
       fetch(url)
         .then((response) => response.json())
@@ -44,26 +33,53 @@ export default class News extends React.Component {
     }
   }
 
-  render() {
-    const { newsData, isLoading, error } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    }
-    if (isLoading) {
-      return <div>Loading...</div>;
-    }
+  handleChange(event) {
+    // eslint-disable-next-line
+    const searchTerm = event.target.value;
+    axios
+      .get(`https://jsonplaceholder.typicode.com/photos?q=${searchTerm}`)
+      .then((response) => {
+        this.setState({ results: response.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
+  render() {
     return (
       <div className="input-search">
+        <div className="input-box">
         <input
           type="text"
           placeholder="  Cari Berita..."
-          value={this.state.searchTerm}
-          onChange={this.handleInputChange}
+          onChange={this.handleChange}
         />
+        </div>
         <div className="news">
-          {newsData.map((article) => (
-            <SingleHeadlines key={article.url} article={article} />
+          {this.state.results.map((article) => (
+            <div key={article.id}>
+              <div className="card">
+                <img
+                  className="img-fluid"
+                  src={article.url}
+                  alt={article.title}
+                />
+                <div className="card-body">
+                  <a href={article.url}>
+                    <h2 className="card-title">{article.title}</h2>
+                  </a>
+                  <p className="card-content">{article.title}</p>
+                  <div className="button-1">
+                  <a href={article.url}>
+                    <Button variant="primary" align="center">
+                      Selanjutnya
+                    </Button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
