@@ -1,0 +1,310 @@
+.app {
+  height: 160vh;
+}
+
+.navbar-1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  padding-left: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.image {
+  width: 100%;
+  height: 80vh;
+  background: url("../assets/images/gunung.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-container {
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:monospace;
+}
+
+li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+a:hover {
+  outline: 2px solid #2c9caf;
+  padding: 20px 20px 20px 20px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  text-align: left;
+  margin: 50px 50px 50px 50px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding-right: 600px;
+}
+
+.title-1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  width: 500px;
+}
+
+.title-2 {
+  color: white;
+  width: 500px;
+}
+
+.btn-banner {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+.btn-banner:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.btn-banner::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.btn-banner:hover::before {
+  width: 250%;
+}
+
+.About {
+  padding: 50px 50px 50px 50px;
+  text-align: justify;
+}
+
+.home {
+  height: 40vh;
+  margin: 50px 50px 50px 50px;
+  text-align: justify;
+}
+
+.Contact {
+  height: 40vh;
+  margin: 50px 50px 50px 50px;
+  text-align: justify;
+}
+
+.Category {
+  height: 40vh;
+  margin: 50px 50px 50px 50px;
+  text-align: justify;
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-1 {
+  background-image: url("../assets/images/bali.jpg");
+  background-size: cover;
+}
+
+.card-2 {
+  background-image: url("../assets/images/lombok.jpg");
+  background-size: cover;
+}
+
+.card-3 {
+  background-image: url("../assets/images/raja-ampat.jpg");
+  background-size: cover;
+}
+
+.card-details {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #2c9caf;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.text-body {
+  color: rgb(134, 134, 134);
+}
+
+.text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.card:hover {
+  border-color: #2c9caf;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+.card-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-subscribe {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-subscribe span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.btn-subscribe span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.btn-subscribe:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.btn-subscribe:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.btn-subscribe:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.txt-all-contact {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  color: black;
+}
+
+.txt-contact {
+  font-weight: 800;
+}
